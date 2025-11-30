@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Label Startup Engagée - La RSE opérationnelle</title>
-    <meta name="description" content="Le label RSE des entreprises qui veulent agir. Un parcours simple, guidé et reconnu pour les startups et PME.">
+    <title>Label Startup Engagée - Agir, pas juste promettre</title>
+    <meta name="description" content="Le label RSE des entreprises qui veulent agir. Un parcours simple, guidé et crédible pour les startups et PME.">
+    
+    <!-- Police d'écriture -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
+        /* --- DESIGN (Inchangé) --- */
         :root { --primary-color: #0f172a; --accent-color: #10b981; --accent-hover: #059669; --bg-light: #f8fafc; --text-dark: #1e293b; --text-gray: #64748b; --white: #ffffff; --radius: 8px; --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Outfit', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
@@ -14,155 +18,261 @@
         a { text-decoration: none; transition: 0.3s; }
         ul { list-style: none; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .btn { display: inline-block; padding: 14px 28px; background-color: var(--accent-color); color: var(--white); font-weight: 600; border-radius: var(--radius); box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3); }
+        .btn { display: inline-block; padding: 14px 28px; background-color: var(--accent-color); color: var(--white); font-weight: 600; border-radius: var(--radius); box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3); border:none; cursor: pointer;}
         .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
         .btn-outline { background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); box-shadow: none; }
         .btn-outline:hover { background-color: var(--primary-color); color: var(--white); }
         .text-center { text-align: center; }
         .section-padding { padding: 80px 0; }
         .highlight { color: var(--accent-color); }
+        
+        /* HEADER */
         header { padding: 20px 0; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(5px); z-index: 1000; }
         .nav-flex { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary-color); }
-        .logo span { color: var(--accent-color); }
         .nav-links { display: flex; gap: 30px; font-weight: 500; }
         .nav-links a { color: var(--text-dark); font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--accent-color); }
         @media (max-width: 768px) { .nav-links { display: none; } }
+
+        /* HERO */
         .hero { padding: 80px 0 60px; background: linear-gradient(to bottom, #ffffff, #f1f5f9); }
-        .hero-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .hero-content { max-width: 900px; margin: 0 auto; text-align: center; }
         .tagline { background: #d1fae5; color: #065f46; padding: 6px 16px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; letter-spacing: -1px; }
-        .hero p { font-size: 1.25rem; color: var(--text-gray); margin-bottom: 40px; }
-        .hero-features { font-size: 0.9rem; color: var(--text-gray); margin-top: 15px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; letter-spacing: -1px; }
+        .hero p { font-size: 1.15rem; color: var(--text-gray); margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        
+        /* TRUST */
         .trust-bar { background: var(--white); padding: 40px 0; border-bottom: 1px solid #f1f5f9; }
-        .trust-logos { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; opacity: 0.6; font-weight: 700; color: #94a3b8; font-size: 1.5rem; }
+        .trust-text { text-align: center; font-size: 1rem; color: var(--text-dark); margin-bottom: 20px; max-width: 800px; margin: 0 auto 20px; }
+        .trust-logos { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-weight: 700; color: #64748b; font-size: 1.2rem; text-transform: uppercase; }
+
+        /* FEATURES (POURQUOI) */
         .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
-        .feature-card { background: var(--white); padding: 30px; border-radius: var(--radius); border: 1px solid #e2e8f0; transition: 0.3s; }
-        .feature-card:hover { border-color: var(--accent-color); box-shadow: var(--shadow); }
-        .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+        .feature-card { background: var(--white); padding: 30px; border-radius: var(--radius); border: 1px solid #e2e8f0; }
+        .icon { font-size: 2rem; margin-bottom: 15px; display: block; }
+
+        /* SPLIT (CONTENU) */
         .split-section { display: flex; align-items: center; gap: 60px; }
         .split-content { flex: 1; }
-        .split-image { flex: 1; background: #e2e8f0; height: 400px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: #94a3b8; }
-        .check-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
+        .split-image { flex: 1; background: #e2e8f0; padding: 40px; border-radius: var(--radius); }
+        .check-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
         .check-icon { color: var(--accent-color); }
+
+        /* PROCESS */
         .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; text-align: center; }
-        .step-number { width: 50px; height: 50px; background: var(--primary-color); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; margin: 0 auto 20px; }
-        .pricing-box { background: var(--primary-color); color: var(--white); border-radius: 20px; padding: 60px; margin-top: 50px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px; }
-        .price-tag { text-align: center; background: rgba(255,255,255,0.1); padding: 30px; border-radius: var(--radius); min-width: 250px; }
-        .old-price { text-decoration: line-through; color: #94a3b8; font-size: 1.2rem; }
-        .current-price { font-size: 3rem; font-weight: 700; color: var(--accent-color); line-height: 1; }
-        .promo-badge { background: var(--accent-color); color: var(--white); font-size: 0.8rem; padding: 4px 10px; border-radius: 20px; vertical-align: middle; }
-        details { background: var(--white); border: 1px solid #e2e8f0; margin-bottom: 15px; border-radius: var(--radius); padding: 20px; cursor: pointer; }
-        summary { font-weight: 600; list-style: none; position: relative; padding-right: 20px; }
+        .step-number { width: 40px; height: 40px; background: var(--primary-color); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 15px; }
+
+        /* PRICING */
+        .pricing-box { background: var(--primary-color); color: var(--white); border-radius: 20px; padding: 50px; margin-top: 50px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; }
+        .price-tag { background: rgba(255,255,255,0.1); padding: 30px; border-radius: var(--radius); min-width: 280px; text-align: center; }
+        .current-price { font-size: 2.5rem; font-weight: 700; color: var(--accent-color); }
+        .promo-text { font-size: 0.9rem; color: #cbd5e1; margin-top: 10px; }
+
+        /* WHY NOW */
+        .why-now-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px; }
+        .why-now-item h4 { color: var(--primary-color); margin-bottom: 5px; }
+
+        /* FOOTER */
         footer { background: var(--bg-light); padding: 50px 0; margin-top: 80px; text-align: center; border-top: 1px solid #e2e8f0; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .split-section { flex-direction: column; } .pricing-box { flex-direction: column; text-align: center; padding: 40px 20px; } }
+        
+        @media (max-width: 768px) { 
+            .hero h1 { font-size: 2.2rem; } 
+            .split-section { flex-direction: column; } 
+            .pricing-box { flex-direction: column; }
+            .why-now-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
         <div class="container nav-flex">
-            <div class="logo">Label <span>Startup Engagée</span></div>
+            <div class="logo">Label Startup Engagée</div>
             <nav class="nav-links">
                 <a href="#pourquoi">Pourquoi ?</a>
-                <a href="#process">Le Parcours</a>
-                <a href="#tarif">Tarifs</a>
-                <a href="#faq">FAQ</a>
+                <a href="#contenu">Ce que contient</a>
+                <a href="#process">Parcours</a>
+                <a href="#tarif">Tarif</a>
             </nav>
             <a href="#tarif" class="btn">🚀 Lancer ma labellisation</a>
         </div>
     </header>
 
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="container hero-content">
-            <span class="tagline">Soutenu par la BPI et Impact France</span>
-            <h1>Le label RSE des entreprises qui veulent agir, <span class="highlight">pas juste promettre.</span></h1>
-            <p>Structurez votre démarche, rassurez vos partenaires et valorisez votre impact. Un parcours simple, guidé et reconnu.</p>
-            <a href="#tarif" class="btn">🚀 Lancer ma labellisation</a>
-            <div class="hero-features"><span>⚡ Audit sous 7 jours</span> &nbsp;•&nbsp; <span>🔒 Aucune CB requise</span></div>
+            <span class="tagline">Label Startup Engagée</span>
+            <h1>Le label RSE des entreprises qui veulent agir, <span class="highlight">pas juste promettre</span></h1>
+            
+            <p>Le Label Startup Engagée est un label conçu pour les startups et petites entreprises qui souhaitent structurer rapidement leur démarche RSE sans complexité ni budget démesuré.</p>
+            <p style="font-size:1rem; margin-top:-15px;">Un parcours simple, guidé, basé sur des preuves, qui permet d’obtenir une reconnaissance claire, crédible et opérationnelle de ses engagements.</p>
+            
+            <div style="margin-top: 30px;">
+                <a href="#tarif" class="btn">Commencer la labellisation</a>
+            </div>
         </div>
     </section>
 
+    <!-- CREDIBILITY SECTION -->
     <div class="trust-bar">
         <div class="container">
-            <div class="text-center" style="margin-bottom:20px; color:#64748b; font-size:0.9rem; text-transform:uppercase;">Un label reconnu par l'écosystème</div>
+            <p class="trust-text">
+                Créé avec des experts ESG, et bénéficiaire du Fonds Parisien pour l’Innovation de la BPI, le Label Startup Engagée est référencé depuis 3 ans dans le mapping Impact France.
+            </p>
             <div class="trust-logos">
-                <div>BPI FRANCE</div><div>IMPACT FRANCE</div><div>STATION F</div><div>LA FRENCH TECH</div>
+                <span>Soutenu par la BPI</span>
+                <span>Mapping Impact France</span>
+                <span>Utilisé par des dizaines de startups depuis 2023</span>
             </div>
         </div>
     </div>
 
+    <!-- POURQUOI SE LABELLISER -->
     <section id="pourquoi" class="section-padding">
         <div class="container">
-            <div class="text-center"><h2>Pourquoi obtenir le label ?</h2><p style="color:var(--text-gray);">Plus qu'un badge, un outil de croissance.</p></div>
+            <div class="text-center">
+                <h2>Pourquoi se labelliser ?</h2>
+            </div>
+            
             <div class="features-grid">
-                <div class="feature-card"><span class="icon">🤝</span><h3>Rassurez vos prospects</h3><p>Gagnez en crédibilité lors des appels d'offres.</p></div>
-                <div class="feature-card"><span class="icon">💚</span><h3>Attirez les talents</h3><p>Valorisez vos engagements auprès de candidats qui cherchent du sens.</p></div>
-                <div class="feature-card"><span class="icon">⚙️</span><h3>Structurez votre démarche</h3><p>Utilisez notre cadre pour structurer votre RSE sans complexité.</p></div>
+                <div class="feature-card">
+                    <span class="icon">📢</span>
+                    <h3>Valoriser vos engagements</h3>
+                    <p>Auprès de vos clients, partenaires et talents.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🏗️</span>
+                    <h3>Structurer votre démarche RSE</h3>
+                    <p>Même si vous partez de zéro.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🤝</span>
+                    <h3>Rassurer vos prospects</h3>
+                    <p>Notamment dans les appels d’offres.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding" style="background-color: #f1f5f9;">
+    <!-- CE QUE CONTIENT VOTRE LABELLISATION (SPLIT) -->
+    <section id="contenu" class="section-padding" style="background-color: #f1f5f9;">
         <div class="container split-section">
             <div class="split-content">
-                <h2>Pas encore de politique RSE ?<br><span class="highlight">On vous la fournit.</span></h2>
-                <p>La peur de la page blanche est finie. Nous vous fournissons les modèles.</p><br>
+                <h2>Ce que contient votre labellisation</h2>
+                <br>
                 <ul class="check-list">
-                    <li><span class="check-icon">✔</span> Modèles de chartes éthiques & RH</li>
-                    <li><span class="check-icon">✔</span> Documents juridiques essentiels</li>
-                    <li><span class="check-icon">✔</span> Recommandations par des experts</li>
-                </ul><br>
-                <a href="#process" class="btn btn-outline">Voir comment ça marche</a>
+                    <li><span class="check-icon">✔</span> Le questionnaire complet</li>
+                    <li><span class="check-icon">✔</span> Les modèles de documents essentiels</li>
+                    <li><span class="check-icon">✔</span> L’audit par un expert</li>
+                    <li><span class="check-icon">✔</span> Les recommandations RSE personnalisées</li>
+                    <li><span class="check-icon">✔</span> Le kit communication (badges, visuels LinkedIn, copywriting)</li>
+                    <li><span class="check-icon">✔</span> Un livret avec vos résultats à partager</li>
+                </ul>
             </div>
-            <div class="split-image"><span>[Image Documents]</span></div>
+            <div class="split-image">
+                <!-- Zone pour image ou texte visuel -->
+                <div style="background:white; padding:30px; border-radius:8px;">
+                    <h3>Pour qui ?</h3>
+                    <p>Le Label Startup Engagée a été créé pour :</p>
+                    <ul style="margin-top:10px; font-size:0.95rem;">
+                        <li>• Les startups, TPE et PME de 11 à +50 collaborateurs</li>
+                        <li>• Les entreprises en croissance avec un début de structuration</li>
+                        <li>• Les organisations qui veulent formaliser leurs engagements</li>
+                    </ul>
+                    <br>
+                    <p style="font-size:0.85rem; color:var(--accent-color); font-weight:bold;">💡 Les entreprises de 0–10 collaborateurs restent éligibles avec un tarif préférentiel, contactez-nous directement !</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- PARCOURS (PROCESS) -->
     <section id="process" class="section-padding">
         <div class="container">
-            <div class="text-center"><h2>Labellisé en 3 étapes simples</h2></div>
+            <div class="text-center">
+                <h2>Un parcours simple et rapide</h2>
+                <p style="color:var(--text-gray);">Un processus en 3 étapes</p>
+            </div>
+
             <div class="process-steps">
-                <div><div class="step-number">1</div><h3>Questionnaire</h3><p>30 min pour répondre à 21 questions ciblées.</p></div>
-                <div><div class="step-number">2</div><h3>Preuves</h3><p>Déposez vos documents ou utilisez nos modèles.</p></div>
-                <div><div class="step-number">3</div><h3>Audit & Succès</h3><p>Audit sous 7 jours et réception du kit communication.</p></div>
+                <div>
+                    <div class="step-number">1</div>
+                    <h3>Questionnaire</h3>
+                    <p>21 questions qui couvrent les 3 piliers du label : Gouvernance & éthique, Environnement, Social & RH.</p>
+                    <p style="font-size:0.85rem; color:var(--text-gray); margin-top:10px;">Temps : Environ 30min</p>
+                </div>
+                <div>
+                    <div class="step-number">2</div>
+                    <h3>Dépôt des preuves</h3>
+                    <p>Un système de dépôt simple directement sur la plateforme. Nous vous fournissons également des templates (politiques, chartes, documents RH) si vous n’en avez pas.</p>
+                </div>
+                <div>
+                    <div class="step-number">3</div>
+                    <h3>Audit & obtention du label</h3>
+                    <p>Un audit ultra rapide, vos résultats sont disponibles sous 7 jours. Vous recevez l’échelon obtenu, le livret détaillé et un kit de communication.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- TARIF & URGENCY -->
     <section id="tarif" class="section-padding">
         <div class="container">
             <div class="pricing-box">
-                <div class="pricing-content">
-                    <h3>Pour qui est-ce ?</h3><p>Startups, TPE et PME (11 à +50 collaborateurs).</p>
-                    <p style="font-size:0.9rem; opacity:0.8;">Moins de 10 employés ? <a href="#" style="color:white; text-decoration:underline;">Contactez-nous</a>.</p>
+                <div style="flex:1;">
+                    <h3>Pourquoi se labelliser maintenant ?</h3>
+                    <div class="why-now-grid">
+                        <div class="why-now-item">
+                            <h4>Facile</h4>
+                            <p style="font-size:0.9rem; color:#cbd5e1;">Expérience simplifiée, templates documentaires disponibles, support en ligne renforcé...</p>
+                        </div>
+                        <div class="why-now-item">
+                            <h4>Utile</h4>
+                            <p style="font-size:0.9rem; color:#cbd5e1;">Les clients demandent de plus en plus des preuves RSE.</p>
+                        </div>
+                        <div class="why-now-item">
+                            <h4>Rapide</h4>
+                            <p style="font-size:0.9rem; color:#cbd5e1;">Un délai d’audit raccourci (sous 7 jours).</p>
+                        </div>
+                        <div class="why-now-item">
+                            <h4>Accessible</h4>
+                            <p style="font-size:0.9rem; color:#cbd5e1;">Un tarif promotionnel très avantageux.</p>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="price-tag">
-                    <p style="margin-bottom:5px; font-size:0.9rem;">Tarif labellisation</p>
-                    <div class="old-price">149 €</div>
-                    <div class="current-price">129 € <span style="font-size:1rem; color:white;">HT</span></div>
-                    <div style="margin: 10px 0;"><span class="promo-badge">-50% Code Promo LinkedIn</span></div>
-                    <p style="font-size:0.8rem; margin-top:10px;">Jusqu'au 31 Décembre 2025</p><br>
-                    <a href="#" class="btn" style="width:100%; background:white; color:var(--primary-color);">Commencer maintenant</a>
+                    <p style="margin-bottom:10px;">Tarif unique</p>
+                    <div class="current-price">129 €</div>
+                    <p style="font-size:0.9rem;">Jusqu'en février 2026</p>
+                    <div style="margin: 20px 0; border-top:1px solid rgba(255,255,255,0.2); border-bottom:1px solid rgba(255,255,255,0.2); padding:15px 0;">
+                        <span style="background:white; color:var(--primary-color); padding:2px 8px; border-radius:4px; font-weight:bold; font-size:0.8rem;">🎁 OFFRE -50%</span>
+                        <p class="promo-text">Avec un code promo réservé aux abonnés de la page LinkedIn du LSE (jusqu’au 31 décembre 2026).</p>
+                    </div>
+                    <p style="font-size:0.8rem;">Passera à 149 € à partir du 1er février 2026</p>
+                    <br>
+                    <a href="#" class="btn" style="width:100%; background:white; color:var(--primary-color);">🚀 Lancer ma labellisation</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="section-padding">
-        <div class="container" style="max-width: 800px;">
-            <div class="text-center" style="margin-bottom:40px;"><h2>Questions Fréquentes</h2></div>
-            <details><summary>Pourquoi se labelliser maintenant ?</summary><p>Pour prendre de l'avance sur les appels d'offres et éviter la hausse des prix.</p></details>
-            <details><summary>Et si je n'ai pas de politique RSE ?</summary><p>Nous vous fournissons les modèles pour la construire.</p></details>
-            <details><summary>Le label est-il reconnu ?</summary><p>Oui, soutenu par la BPI et référencé Impact France.</p></details>
-        </div>
-    </section>
-
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <h3>Label Startup Engagée</h3><p>La RSE opérationnelle.</p>
-            <div class="footer-links" style="margin-top:20px;"><a href="#">Mentions Légales</a><a href="#">Contact</a></div>
+            <h3>Label Startup Engagée</h3>
+            <p>Un label reconnu</p>
+            <div style="margin-top:20px; font-size:0.9rem; color:var(--text-gray);">
+                Soutenu par la BPI • Mentionné dans le mapping Impact France • Utilisé par des dizaines de startups depuis 2021
+            </div>
+            <br>
+            <a href="#tarif" class="btn">🚀 Lancer ma labellisation</a>
+            <div style="margin-top:40px; font-size:0.8rem; color:#cbd5e1;">
+                &copy; 2025 Label Startup Engagée. Tous droits réservés.
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
