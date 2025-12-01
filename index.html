@@ -3,238 +3,463 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Label Startup Engagée - La RSE opérationnelle</title>
-    <meta name="description" content="Le label RSE des entreprises qui veulent agir. Un parcours simple, guidé et reconnu pour les startups et PME.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Label Startup Engagée - La RSE structurée et reconnue</title>
+    <meta name="description" content="Le label RSE simple et rapide pour les startups et PME. Structurez votre démarche, même en partant de zéro.">
+    
+    <!-- Police SEN (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
-        :root { --primary-color: #28007F; --secondary-color: #8885FF --accent-color: #00DA56; --accent-hover: #059669; --bg-light: #f8fafc; --text-dark: #28007F ; --text-gray: #64748b; --white: #ffffff; --radius: 8px; --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Outfit', sans-serif; color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
-        h1, h2, h3 { line-height: 1.2; font-weight: 700; color: var(--primary-color); }
+        /* --- VARIABLES & CHARTE --- */
+        :root {
+            --primary: #28007F;       /* Bleu Nuit Profond */
+            --accent: #00DA56;        /* Vert Flash (Action) */
+            --secondary: #8885FF;     /* Violet Doux (Décoration) */
+            --bg-light: #F4F7FE;      /* Fond très clair */
+            --white: #ffffff;
+            --text-dark: #1E1E2F;
+            --text-gray: #64748b;
+            --radius: 16px;           /* Arrondis modernes */
+            --shadow: 0 10px 30px -10px rgba(40, 0, 127, 0.1);
+        }
+
+        /* --- RESET & BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            font-family: 'Sen', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { color: var(--primary); line-height: 1.1; font-weight: 700; }
+        p { color: var(--text-gray); font-size: 1.05rem; }
         a { text-decoration: none; transition: 0.3s; }
+        img { max-width: 100%; height: auto; border-radius: var(--radius); }
         ul { list-style: none; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .btn { display: inline-block; padding: 14px 28px; background-color: var(--accent-color); color: var(--white); font-weight: 600; border-radius: var(--radius); box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3); }
-        .btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
-        .btn-outline { background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); box-shadow: none; }
-        .btn-outline:hover { background-color: var(--primary-color); color: var(--white); }
+
+        /* --- UTILITAIRES --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section-padding { padding: 100px 0; }
         .text-center { text-align: center; }
-        .section-padding { padding: 80px 0; }
-        .highlight { color: var(--accent-color); }
-        header { padding: 20px 0; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(5px); z-index: 1000; }
+        .highlight { color: var(--secondary); }
+        
+        /* Boutons Modernes */
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: var(--accent);
+            color: var(--primary);
+            font-weight: 700;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 218, 86, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 218, 86, 0.6);
+            background-color: #00b347;
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* --- HEADER (Glassmorphism) --- */
+        header {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
         .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary-color); }
-        .logo span { color: var(--accent-color); }
-        .nav-links { display: flex; gap: 30px; font-weight: 500; }
-        .nav-links a { color: var(--text-dark); font-size: 0.95rem; }
-        .nav-links a:hover { color: var(--accent-color); }
+        .logo { font-weight: 800; font-size: 1.4rem; color: var(--primary); display: flex; align-items: center; gap:8px; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 32px; font-weight: 600; }
+        .nav-links a { color: var(--primary); font-size: 1rem; }
+        .nav-links a:hover { color: var(--secondary); }
         @media (max-width: 768px) { .nav-links { display: none; } }
-        .hero { padding: 80px 0 60px; background: linear-gradient(to bottom, #ffffff, #f1f5f9); }
-        .hero-content { max-width: 800px; margin: 0 auto; text-align: center; }
-        .tagline { background: #d1fae5; color: #065f46; padding: 6px 16px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; letter-spacing: -1px; }
-        .hero p { font-size: 1.25rem; color: var(--text-gray); margin-bottom: 40px; }
-        .hero-features { font-size: 0.9rem; color: var(--text-gray); margin-top: 15px; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+            background: radial-gradient(circle at top right, rgba(136, 133, 255, 0.1), transparent 40%);
+        }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-text h1 { font-size: 3.5rem; margin-bottom: 24px; letter-spacing: -1px; }
+        .hero-text p { font-size: 1.2rem; margin-bottom: 40px; }
+        .tagline {
+            display: inline-block;
+            background: rgba(136, 133, 255, 0.15);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        .hero-image {
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+
+        /* --- TRUST BAR --- */
         .trust-bar { background: var(--white); padding: 40px 0; border-bottom: 1px solid #f1f5f9; }
-        .trust-logos { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; opacity: 0.6; font-weight: 700; color: #94a3b8; font-size: 1.5rem; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
-        .feature-card { background: var(--white); padding: 30px; border-radius: var(--radius); border: 1px solid #e2e8f0; transition: 0.3s; }
-        .feature-card:hover { border-color: var(--accent-color); box-shadow: var(--shadow); }
-        .icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
-        .split-section { display: flex; align-items: center; gap: 60px; }
-        .split-content { flex: 1; }
-        .split-image { flex: 1; background: #e2e8f0; height: 400px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: #94a3b8; }
-        .check-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; font-weight: 500; }
-        .check-icon { color: var(--accent-color); }
-        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; text-align: center; }
-        .step-number { width: 50px; height: 50px; background: var(--primary-color); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; margin: 0 auto 20px; }
-        .pricing-box { background: var(--secondary-color); color: var(--white); border-radius: 20px; padding: 60px; margin-top: 50px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px; }
-        .price-tag { text-align: center; background: rgba(255,255,255,0.1); padding: 30px; border-radius: var(--radius); min-width: 250px; }
-        .old-price { text-decoration: line-through; color: #94a3b8; font-size: 1.2rem; }
-        .current-price { font-size: 3rem; font-weight: 700; color: var(--accent-color); line-height: 1; }
-        .promo-badge { background: var(--accent-color); color: var(--white); font-size: 0.8rem; padding: 4px 10px; border-radius: 20px; vertical-align: middle; }
-        details { background: var(--white); border: 1px solid #e2e8f0; margin-bottom: 15px; border-radius: var(--radius); padding: 20px; cursor: pointer; }
-        summary { font-weight: 600; list-style: none; position: relative; padding-right: 20px; }
-        footer { background: var(--bg-light); padding: 50px 0; margin-top: 80px; text-align: center; border-top: 1px solid #e2e8f0; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } .split-section { flex-direction: column; } .pricing-box { flex-direction: column; text-align: center; padding: 40px 20px; } }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 30px; align-items: center; justify-items: center; opacity: 0.6; filter: grayscale(100%); transition: 0.3s; }
+        .trust-grid:hover { filter: grayscale(0%); opacity: 1; }
+
+        /* --- CARDS (Why & Features) --- */
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: 0 20px 40px -10px rgba(136, 133, 255, 0.2);
+        }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .icon-box {
+            width: 60px; height: 60px;
+            background: rgba(136, 133, 255, 0.1);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+        }
+
+        /* --- SPLIT SECTION (Image + Text) --- */
+        .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .check-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--primary); }
+        .check-circle { width: 24px; height: 24px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 0.8rem; flex-shrink: 0; }
+
+        /* --- PROCESS --- */
+        .process-card { text-align: center; position: relative; }
+        .step-num {
+            font-size: 4rem; font-weight: 800; color: rgba(136, 133, 255, 0.2);
+            position: absolute; top: -30px; left: 50%; transform: translateX(-50%); z-index: 0;
+        }
+        .process-content { position: relative; z-index: 1; background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); height: 100%; }
+
+        /* --- PRICING --- */
+        .pricing-section { background: var(--primary); color: var(--white); border-radius: 30px; padding: 80px 40px; text-align: center; position: relative; overflow: hidden; }
+        .pricing-section h2, .pricing-section p { color: var(--white); }
+        .price-big { font-size: 4rem; font-weight: 800; color: var(--accent); line-height: 1; margin: 20px 0; }
+        .price-badge { background: var(--secondary); color: var(--white); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 700; display: inline-block; margin-bottom: 10px; }
+
+        /* --- FAQ (Accordion) --- */
+        details {
+            background: var(--white);
+            margin-bottom: 16px;
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        details[open] { border-left: 5px solid var(--accent); }
+        summary { font-weight: 700; color: var(--primary); font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::after { content: '+'; font-size: 1.5rem; color: var(--secondary); font-weight: 400; }
+        details[open] summary::after { content: '-'; }
+        details p { margin-top: 16px; font-size: 1rem; color: var(--text-dark); opacity: 0.9; }
+
+        /* --- FOOTER --- */
+        footer { background: var(--white); border-top: 1px solid #e2e8f0; padding: 60px 0; text-align: center; }
+        
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-grid, .split-section { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            .hero-image { order: -1; } /* L'image passe au dessus sur mobile */
+            .hero h1 { font-size: 2.5rem; }
+            .check-list { text-align: left; display: inline-block; }
+            .pricing-section { padding: 40px 20px; }
+        }
     </style>
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <header>
         <div class="container nav-flex">
-            <div class="logo">Label <span>Startup Engagée</span></div>
+            <div class="logo">
+                <!-- Placeholder Logo -->
+                <img src="https://placehold.co/40x40/28007F/FFF?text=L" alt="Logo">
+                Label <span>Startup Engagée</span>
+            </div>
             <nav class="nav-links">
                 <a href="#pourquoi">Pourquoi ?</a>
-                <a href="#process">Le Parcours</a>
-                <a href="#tarif">Tarifs</a>
+                <a href="#process">Parcours</a>
+                <a href="#contenu">Inclus</a>
                 <a href="#faq">FAQ</a>
             </nav>
-            <a href="#tarif" class="btn">🚀 Lancer ma labellisation</a>
+            <a href="#tarif" class="btn">🚀 Me labelliser</a>
         </div>
     </header>
 
+    <!-- HERO SECTION -->
     <section class="hero">
-        <div class="container hero-content">
-            <span class="tagline">Soutenu par la BPI et référencé par le mouvement Impact France</span>
-            <h1>Le label RSE des entreprises qui veulent agir, <span class="highlight">pas juste promettre.</span></h1>
-            <p>Structurez votre démarche, rassurez vos partenaires et valorisez votre impact. Un parcours simple, guidé et reconnu.</p>
-            <a href="#tarif" class="btn">🚀 Lancer ma labellisation</a>
-            <div class="hero-features"><span> Audit sous 7 jours</span> &nbsp;•&nbsp; <span> Votre label pour 1 an</span></div>
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <span class="tagline">Agir, pas juste promettre</span>
+                <h1>Le label RSE pour les startups qui veulent <span style="color:var(--secondary);">structurer leur impact.</span></h1>
+                <p>Un parcours simple, guidé et reconnu pour obtenir une reconnaissance crédible sans budget démesuré.</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="#tarif" class="btn">Commencer maintenant</a>
+                    <a href="#process" class="btn btn-outline">Voir le parcours</a>
+                </div>
+                <div style="margin-top: 30px; font-size: 0.9rem; color: var(--text-gray); display: flex; align-items: center; gap: 10px;">
+                    <span style="color:var(--accent); font-size:1.2rem;">★</span> Soutenu par la BPI & Impact France
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder Image Principale -->
+                <img src="https://placehold.co/600x450/28007F/FFF?text=Illustration+Startup+RSE" alt="Illustration Label">
+            </div>
         </div>
     </section>
 
+    <!-- TRUST BAR -->
     <div class="trust-bar">
         <div class="container">
-            <div class="text-center" style="margin-bottom:20px; color:#64748b; font-size:0.9rem; text-transform:uppercase;">Un label reconnu par l'écosystème</div>
-            <div class="trust-logos">
-                <div>LOGO</div><div>LOGO</div><div>LOGO</div><div>LOGO</div>
+            <p class="text-center" style="margin-bottom: 30px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; font-weight: 700;">Reconnu par l'écosystème</p>
+            <div class="trust-grid">
+                <img src="https://placehold.co/150x60/EEE/999?text=BPI+FRANCE" alt="BPI">
+                <img src="https://placehold.co/150x60/EEE/999?text=IMPACT+FRANCE" alt="Impact France">
+                <img src="https://placehold.co/150x60/EEE/999?text=MATRICE" alt="Matrice">
+                <img src="https://placehold.co/150x60/EEE/999?text=STATION+F" alt="Station F">
+                <img src="https://placehold.co/150x60/EEE/999?text=+100+STARTUPS" alt="Startups">
             </div>
         </div>
     </div>
 
+    <!-- POURQUOI (CARDS) -->
     <section id="pourquoi" class="section-padding">
         <div class="container">
-            <div class="text-center"><h2>Pourquoi obtenir le label ?</h2><p style="color:var(--text-gray);">Plus qu'un badge, un outil de croissance.</p></div>
-            <div class="features-grid">
-                <div class="feature-card"><span class="icon">🤝</span><h3>Valoriser</h3><p>vos engagements auprès de vos clients, partenaires et talents.
-</p></div>
-                <div class="feature-card"><span class="icon">💚</span><h3>Structurer votre démarche RSE</h3><p>même si vous partez de zéro.
-</p></div>
-                <div class="feature-card"><span class="icon">⚙️</span><h3>Rassurer vos prospects</h3><p>notamment dans les appels d’offres.</p></div>
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <h2>Pourquoi se labelliser ?</h2>
+                <p>Plus qu'un badge, c'est un accélérateur de crédibilité pour votre entreprise.</p>
+            </div>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon-box">📢</div>
+                    <h3>Valoriser vos engagements</h3>
+                    <p>Auprès de vos clients, partenaires et talents. Montrez que vous agissez concrètement.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">🏗️</div>
+                    <h3>Structurer votre démarche</h3>
+                    <p>Même si vous partez de zéro, utilisez notre cadre pour construire une politique RSE solide.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">🤝</div>
+                    <h3>Rassurer vos prospects</h3>
+                    <p>Un atout décisif pour répondre aux exigences RSE des appels d'offres.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding" style="background-color: #f1f5f9;">
+    <!-- CONTENU (SPLIT) -->
+    <section id="contenu" class="section-padding" style="background: var(--white);">
         <div class="container split-section">
-            <div class="split-content">
-                <h2>Pas encore de politique RSE ?<br><span class="highlight">On vous guide.</span></h2>
-                <p>Nous vous fournissons des templates pour amorcer votre démarche.</p><br>
-                <ul class="check-list">
-                    <li><span class="check-icon">✔</span> Politiques</li>
-                    <li><span class="check-icon">✔</span> Chartes</li>
-                    <li><span class="check-icon">✔</span> Indicateurs de mesure</li>
-                </ul><br>
-                <a href="#process" class="btn btn-outline">Voir comment ça marche</a>
+            <div class="split-image">
+                <!-- Placeholder Image Pack -->
+                <img src="https://placehold.co/600x500/8885FF/FFF?text=Aperçu+Plateforme+%26+Templates" alt="Contenu du pack">
             </div>
-            <div class="split-image"><span>[Image Documents]</span></div>
+            <div class="split-content">
+                <span class="highlight" style="font-weight: 700;">TOUT INCLUS</span>
+                <h2>Ce que contient votre labellisation</h2>
+                <p style="margin-bottom: 30px;">Nous vous donnons les outils pour réussir, pas juste un examen à passer.</p>
+                
+                <ul class="check-list">
+                    <li><span class="check-circle">✓</span> Le questionnaire complet d'auto-évaluation</li>
+                    <li><span class="check-circle">✓</span> Les modèles de documents (Chartes, RH, Éthique)</li>
+                    <li><span class="check-circle">✓</span> L’audit réalisé par un expert ESG</li>
+                    <li><span class="check-circle">✓</span> Les recommandations personnalisées</li>
+                    <li><span class="check-circle">✓</span> Le kit communication (Badges, visuels LinkedIn)</li>
+                    <li><span class="check-circle">✓</span> Un livret de résultats à partager</li>
+                </ul>
+            </div>
         </div>
     </section>
 
+    <!-- PROCESS -->
     <section id="process" class="section-padding">
         <div class="container">
-            <div class="text-center"><h2>Labellisé en 3 étapes simples</h2></div>
-            <div class="process-steps">
-                <div><div class="step-number">1</div><h3>Questionnaire</h3><p>30 min pour répondre à 21 questions ciblées.</p></div>
-                <div><div class="step-number">2</div><h3>Preuves</h3><p>Déposez vos documents ou utilisez nos modèles.</p></div>
-                <div><div class="step-number">3</div><h3>Audit & validation</h3><p>Audit sous 7 jours et réception du kit communication.</p></div>
+            <div class="text-center">
+                <h2>Comment se déroule le parcours ?</h2>
+                <p>3 étapes simples, 100% en ligne, à votre rythme.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="process-card">
+                    <div class="step-num">1</div>
+                    <div class="process-content">
+                        <h3>Questionnaire</h3>
+                        <p>Répondez au questionnaire (environ 30 min) couvrant les 3 piliers : Gouvernance, Environnement, Social.</p>
+                    </div>
+                </div>
+                <div class="process-card">
+                    <div class="step-num">2</div>
+                    <div class="process-content">
+                        <h3>Dépôt des preuves</h3>
+                        <p>Déposez vos documents. Pas de panique : si vous n'avez pas tout, utilisez nos modèles prêts à l'emploi.</p>
+                    </div>
+                </div>
+                <div class="process-card">
+                    <div class="step-num">3</div>
+                    <div class="process-content">
+                        <h3>Audit & Résultat</h3>
+                        <p>Nos experts auditent votre dossier. Sous 7 jours, vous recevez votre résultat et votre kit de communication.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- PRICING & CIBLAGE -->
     <section id="tarif" class="section-padding">
         <div class="container">
-            <div class="pricing-box">
-                <div class="pricing-content">
-                    <h3>Pour qui ?</h3><p>Startups, TPE et PME (11 à +50 collaborateurs).</p>
-                    <p style="font-size:0.9rem; opacity:0.8;">Moins de 10 employés ? <a href="#" style="color:white; text-decoration:underline;">Contactez-nous</a>.</p>
-                </div>
-                <div class="price-tag">
-                    <p style="margin-bottom:5px; font-size:0.9rem;">Tarif labellisation</p>
-                    <div class="old-price">149 €</div>
-                    <div class="current-price">129 € <span style="font-size:1rem; color:white;">HT</span></div>
-                    <div style="margin: 10px 0;"><span class="promo-badge">-50% Code Promo nouvel abonné LinkedIn</span></div>
-                    <p style="font-size:0.8rem; margin-top:10px;">Jusqu'au 31 Décembre 2025</p><br>
-                    <a href="#" class="btn" style="width:100%; background:white; color:var(--primary-color);">Commencer maintenant</a>
+            <div class="pricing-section">
+                <span class="price-badge">🎁 OFFRE SPÉCIALE LINKEDIN (-50%)</span>
+                <h2>Un tarif unique et accessible</h2>
+                <p>Offre valable jusqu'au 31 décembre avec votre code promo.</p>
+                
+                <div class="price-big">129 €</div>
+                <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 30px;">Au lieu de 258€. Le prix passera à 149€ le 1er Février 2026.</p>
+
+                <a href="#" class="btn" style="background: var(--white); color: var(--primary);">🚀 Lancer ma labellisation</a>
+                
+                <div style="margin-top: 40px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto; background: rgba(255,255,255,0.1); padding: 20px; border-radius: var(--radius);">
+                    <h4 style="color:var(--accent); margin-bottom: 10px;">À qui s'adresse le label ?</h4>
+                    <p style="color:white; font-size: 0.95rem;">Principalement aux entreprises (Startups, TPE, PME) de 11 à +50 collaborateurs qui ne sont pas encore matures sur la RSE.</p>
+                    <p style="color:white; font-size: 0.85rem; margin-top: 10px;">💡 Entre 1 et 10 collaborateurs ? Écrivez-nous pour le tarif "Amorçage" encore plus bas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="faq" class="section-padding">
+    <!-- FAQ -->
+    <section id="faq" class="section-padding" style="background: var(--white);">
         <div class="container" style="max-width: 800px;">
-            <div class="text-center" style="margin-bottom:40px;"><h2>Questions Fréquentes</h2></div>
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2>Questions Fréquentes</h2>
+                <p>Tout ce que vous devez savoir avant de vous lancer.</p>
+            </div>
+
+            <!-- FAQ ITEMS -->
             <details>
-  <summary><strong>1. C’est quoi le Label Startup Engagée en 1 phrase ?</strong></summary>
-  Un label simple, rapide et accessible qui permet aux startups de montrer qu’elles ont une démarche RSE structurée — même quand elles partent de zéro.
-</details>
+                <summary>1. C’est quoi le Label Startup Engagée en 1 phrase ?</summary>
+                <p>Un label simple, rapide et accessible qui permet aux startups de montrer qu’elles ont une démarche RSE structurée — même quand elles partent de zéro.</p>
+            </details>
 
-<details>
-  <summary><strong>2. Combien de temps cela prend pour se labelliser ?</strong></summary>
-  Environ 30 minutes pour remplir le questionnaire + le temps nécessaire pour déposer les preuves, puis 7 jours pour recevoir les résultats.
-</details>
+            <details>
+                <summary>2. Combien de temps cela prend pour se labelliser ?</summary>
+                <p>Environ 30 minutes pour remplir le questionnaire + le temps que vous prenez pour déposer les preuves, puis 7 jours pour recevoir les résultats.</p>
+            </details>
 
-<details>
-  <summary><strong>3. Est-ce que c’est compliqué si je n’ai rien mis en place ?</strong></summary>
-  Non. Nous vous fournissons les templates essentiels (politiques internes, charte éthique, etc.) que vous pouvez personnaliser et adapter à votre entreprise.
-</details>
+            <details>
+                <summary>3. Est-ce que c’est compliqué si je n’ai rien mis en place ?</summary>
+                <p>Non, justement. Nous vous fournissons les templates essentiels : politiques internes, charte éthique, etc. Vous pouvez ainsi les personnaliser et les adapter à votre entreprise.</p>
+            </details>
 
-<details>
-  <summary><strong>4. Pourquoi se labelliser maintenant ?</strong></summary>
-  Le label a fait peau neuve : nouveau parcours, nouvelles ressources.<br>
-  Les clients demandent de plus en plus de preuves d’engagement RSE, notamment dans les appels d’offres.<br>
-  Les délais d’audit sont courts et permettent de se lancer vite.<br>
-  <strong>En bref : c’est le meilleur moment pour se lancer.</strong>
-</details>
+            <details>
+                <summary>4. Pourquoi se labelliser maintenant ?</summary>
+                <p>Le label a fait peau neuve : nouveau parcours, nouvelles ressources.<br>
+                Les clients demandent de plus en plus de preuves d’engagements RSE notamment dans les appels d’offres.<br>
+                Les délais d’audit sont très courts et vous permettent de vous lancer vite.<br>
+                Ne soyez pas les derniers à vous engager !<br><br>
+                <strong>En bref : c’est le meilleur moment pour se lancer.</strong></p>
+            </details>
 
-<details>
-  <summary><strong>5. À qui s’adresse le Label Startup Engagée ?</strong></summary>
-  Aux entreprises qui ne sont pas encore matures sur la RSE : startups, TPE et PME.<br>
-  Si votre entreprise compte entre 1 et 10 collaborateurs, vous bénéficiez d’un tarif spécial. Écrivez-nous directement.
-</details>
+            <details>
+                <summary>5. À qui s’adresse le Label Startup Engagée ?</summary>
+                <p>Principalement aux entreprises qui ne sont pas encore matures sur le sujet RSE, toutes les startups, TPE et PME peuvent se lancer.<br>
+                Si votre entreprise a entre 1 et 10 collaborateurs, vous profitez du tarif spécial le plus bas, écrivez-nous directement.</p>
+            </details>
 
-<details>
-  <summary><strong>6. Comment se déroule le parcours ?</strong></summary>
-  En 3 étapes :<br>
-  1. Répondre au questionnaire<br>
-  2. Déposer les preuves<br>
-  3. Audit du dossier + réception du résultat et du kit communication<br><br>
-  Tout se fait en ligne, à votre rythme, sur votre espace personnel.
-</details>
+            <details>
+                <summary>6. Comment se déroule le parcours ?</summary>
+                <p>En 3 étapes :<br>
+                1. Répondre au questionnaire<br>
+                2. Déposer les preuves<br>
+                3. Audit du dossier par nos soins<br>
+                Réception de votre résultat + un kit communication adapté.<br><br>
+                Tout se fait en ligne sur la plateforme pour avancer à votre rythme et accéder à votre dossier à tout moment.</p>
+            </details>
 
-<details>
-  <summary><strong>7. Quelles preuves faut-il fournir ?</strong></summary>
-  Des documents simples :<br>
-  • Politiques internes<br>
-  • Éléments sur vos consommations d’énergie<br>
-  • Gestion des déchets<br>
-  • Inclusion & diversité<br>
-  • Règlement intérieur<br>
-  • Engagement sociétal, etc.<br><br>
-  Si tout n’est pas encore formalisé, nos modèles prêts à l’emploi sont là pour vous aider.
-</details>
+            <details>
+                <summary>7. Quelles preuves faut-il fournir ?</summary>
+                <p>Des documents simples : politiques internes, éléments sur vos consommations d’énergie, gestion des déchets, inclusion et diversité, règlement intérieur, engagement sociétal, etc.<br><br>
+                Si vous n’avez pas encore tout formalisé, pas de panique vous pouvez utiliser nos modèles prêts à l’emploi pour vous aider.</p>
+            </details>
 
-<details>
-  <summary><strong>8. Est-ce que le label est reconnu ?</strong></summary>
-  Oui, le label gagne en notoriété :<br>
-  • Incubé par Matrice (2024–2025)<br>
-  • Soutenu par la BPI et le Fonds Parisien pour l’Innovation<br>
-  • Présent dans le mapping Impact France depuis 3 ans<br>
-  • Utilisé par +100 startups depuis 2023<br><br>
-  C’est un label crédible, simple et adapté aux startups, TPE et PME.
-</details>
+            <details>
+                <summary>8. Est-ce que le label est reconnu ?</summary>
+                <p>Oui, le label Startup Engagé gagne en notoriété et en visibilité à chaque nouveau labellisé. Quelques infos sur le label :<br>
+                - Incubé par Matrice (2024-2025)<br>
+                - Soutenu par la BPI et le Fonds Parisien pour l’Innovation<br>
+                - Présent dans le mapping Impact France depuis 3 ans<br>
+                - Utilisé par +100 startups pour se lancer dans la RSE depuis 2023.<br><br>
+                C’est un label crédible, simple et adapté aux petites entreprises, startups et TPE-PME.</p>
+            </details>
 
-<details>
-  <summary><strong>9. Quel est le prix ?</strong></summary>
-  • 129 € jusqu’au 31 janvier 2026<br>
-  • 149 € à partir du 1er février 2026<br><br>
-  Offre spéciale : -50 % pour les abonnés LinkedIn — valable jusqu’au 31 décembre.
-</details>
+            <details>
+                <summary>9. Quel est le prix ?</summary>
+                <p>129 € jusqu’au 31 janvier 2026<br>
+                149 € à partir du 1er février 2026<br><br>
+                <strong>Offre speciale de -50% pour les abonnés LinkedIn → valable jusqu’au 31 décembre.</strong></p>
+            </details>
 
-<details>
-  <summary><strong>10. Et si j’ai une question ou un doute en cours de route ?</strong></summary>
-  Le support est disponible directement depuis votre espace personnel sur la plateforme, ou via le formulaire de contact du site. Nous répondons très vite.
-</details>
-
+            <details>
+                <summary>10. Et si j’ai une question ou un doute en cours de route ?</summary>
+                <p>Vous pouvez accéder au support facilement dès lors que vous avez créé votre compte sur la plateforme, ou poser votre question via le formulaire de contact sur le site.<br>
+                On répond vite (vraiment vite).</p>
+            </details>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <h3>Label Startup Engagée</h3><p>La RSE opérationnelle.</p><p>Ce projet a été financé par la Région et/ou par l’État dans le cadre de France 2030</p>
-            <div class="footer-links" style="margin-top:20px;"><a href="#">Mentions Légales</a><a href="#">Contact</a></div>
+            <div class="logo" style="justify-content: center; margin-bottom: 20px;">
+                <!-- Placeholder Logo Footer -->
+                <img src="https://placehold.co/30x30/28007F/FFF?text=L" alt="Logo">
+                Label <span>Startup Engagée</span>
+            </div>
+            <p style="margin-bottom: 30px;">Structurer. Prouver. Progresser.</p>
+            <a href="#tarif" class="btn">🚀 Je me lance</a>
+            
+            <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.9rem; display: flex; justify-content: center; gap: 20px;">
+                <a href="#" style="color:var(--text-gray);">Mentions Légales</a>
+                <a href="#" style="color:var(--text-gray);">Politique de Confidentialité</a>
+                <a href="#" style="color:var(--text-gray);">Contact</a>
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 10px;">&copy; 2025 Label Startup Engagée.</p>
         </div>
     </footer>
+
 </body>
 </html>
-
