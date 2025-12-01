@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Label Startup Engagée - Le label RSE des entreprises qui veulent agir</title>
-    <meta name="description" content="Le label RSE conçu pour les startups et petites entreprises qui souhaitent structurer rapidement leur démarche RSE sans complexité.">
+    <meta name="description" content="Le label RSE conçu pour les startups et petites entreprises. Structurez votre démarche, obtenez une reconnaissance France 2030.">
     
     <!-- Police SEN (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
             --white: #ffffff;
             --text-dark: #1E1E2F;
             --text-gray: #64748b;
-            --radius: 16px;           /* Arrondis modernes */
+            --radius: 16px;
             --shadow: 0 10px 30px -10px rgba(40, 0, 127, 0.1);
         }
 
@@ -47,7 +47,7 @@
         .text-center { text-align: center; }
         .highlight { color: var(--secondary); }
         
-        /* Boutons Modernes */
+        /* Boutons */
         .btn {
             display: inline-block;
             padding: 16px 32px;
@@ -65,18 +65,8 @@
             box-shadow: 0 8px 25px rgba(0, 218, 86, 0.6);
             background-color: #00b347;
         }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            box-shadow: none;
-        }
-        .btn-outline:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        /* --- HEADER --- */
+        
+        /* Header */
         header {
             padding: 20px 0;
             position: sticky;
@@ -94,7 +84,7 @@
         .nav-links a:hover { color: var(--secondary); }
         @media (max-width: 768px) { .nav-links { display: none; } }
 
-        /* --- HERO --- */
+        /* Hero */
         .hero {
             padding: 80px 0;
             display: flex;
@@ -118,13 +108,14 @@
         .hero-image { position: relative; animation: float 6s ease-in-out infinite; }
         @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
 
-        /* --- TRUST BAR --- */
+        /* Trust Bar */
         .trust-bar { background: var(--white); padding: 40px 0; border-bottom: 1px solid #f1f5f9; }
         .trust-grid { display: flex; gap: 50px; align-items: center; justify-content: center; flex-wrap: wrap; opacity: 0.8; transition: 0.3s; }
         .trust-grid img { max-height: 50px; width: auto; filter: grayscale(100%); transition: 0.3s; }
         .trust-grid img:hover { filter: grayscale(0%); }
 
-        /* --- CARDS GENERAL --- */
+        /* Cards & Grid */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
         .card {
             background: var(--white);
             padding: 40px;
@@ -132,13 +123,9 @@
             box-shadow: var(--shadow);
             border: 1px solid rgba(0,0,0,0.05);
             transition: 0.3s;
+            height: 100%;
         }
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: 0 20px 40px -10px rgba(136, 133, 255, 0.2);
-        }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+        .card:hover { transform: translateY(-10px); border-color: var(--secondary); box-shadow: 0 20px 40px -10px rgba(136, 133, 255, 0.2); }
         .icon-box {
             width: 60px; height: 60px;
             background: rgba(136, 133, 255, 0.1);
@@ -149,77 +136,47 @@
             margin-bottom: 24px;
         }
 
-        /* --- SPLIT SECTION --- */
+        /* Echelons */
+        .level-badge { background: var(--primary); color: var(--white); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: inline-block; }
+        .level-number { font-size: 3rem; font-weight: 800; color: rgba(0, 218, 86, 0.4); line-height: 1; margin-bottom: 10px; }
+
+        /* Split Section */
         .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .check-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--primary); }
         .check-circle { width: 24px; height: 24px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 0.8rem; flex-shrink: 0; }
 
-        /* --- PROCESS DETAIL --- */
-        .process-card { 
-            text-align: left; /* Alignement gauche pour les listes */
-            position: relative; 
-            background: var(--white);
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            border: 1px solid #eee;
-        }
+        /* Process */
+        .process-card { text-align: left; background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid #eee; }
         .process-card h3 { margin-bottom: 15px; font-size: 1.25rem; }
         .process-card ul { margin-top: 10px; margin-bottom: 10px; padding-left: 10px; }
         .process-card li { font-size: 0.95rem; color: var(--text-gray); margin-bottom: 8px; position: relative; padding-left: 15px; }
         .process-card li::before { content: "•"; color: var(--accent); font-weight: bold; position: absolute; left: 0; }
-        .step-badge {
-            display: inline-block;
-            background: var(--primary);
-            color: var(--white);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
+        .step-badge { display: inline-block; background: var(--primary); color: var(--white); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-bottom: 15px; }
 
-        /* --- PRICING COMPACT --- */
-        .pricing-card {
-            background: var(--white);
-            border: 2px solid var(--primary);
-            border-radius: 24px;
-            padding: 40px;
-            max-width: 450px;
-            margin: 0 auto;
-            text-align: center;
-            box-shadow: 0 15px 40px -10px rgba(40, 0, 127, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-        .pricing-card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 8px;
-            background: var(--accent);
-        }
+        /* Pricing */
+        .pricing-card { background: var(--white); border: 2px solid var(--primary); border-radius: 24px; padding: 40px; max-width: 450px; margin: 0 auto; text-align: center; box-shadow: 0 15px 40px -10px rgba(40, 0, 127, 0.15); position: relative; overflow: hidden; }
+        .pricing-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--accent); }
         .old-price { font-size: 1.5rem; text-decoration: line-through; color: #cbd5e1; font-weight: 600; }
         .new-price { font-size: 3.5rem; font-weight: 800; color: var(--primary); line-height: 1; display: block; margin: 10px 0; }
-        .promo-box {
-            background: rgba(0, 218, 86, 0.1);
-            color: var(--text-dark);
-            padding: 15px;
-            border-radius: 12px;
-            margin: 20px 0;
-        }
+        .promo-box { background: rgba(0, 218, 86, 0.1); color: var(--text-dark); padding: 15px; border-radius: 12px; margin: 20px 0; }
         .promo-code { color: var(--primary); font-weight: 800; display: block; margin-bottom: 5px; }
 
-        /* --- FAQ --- */
+        /* FAQ */
         details { background: var(--white); margin-bottom: 16px; border-radius: var(--radius); padding: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); cursor: pointer; transition: 0.3s; }
         details[open] { border-left: 5px solid var(--accent); }
         summary { font-weight: 700; color: var(--primary); font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
         summary::after { content: '+'; font-size: 1.5rem; color: var(--secondary); font-weight: 400; }
         details[open] summary::after { content: '-'; }
-        
-        /* FOOTER */
+
+        /* Footer */
         footer { background: var(--white); border-top: 1px solid #e2e8f0; padding: 60px 0; text-align: center; }
-        
-        /* RESPONSIVE */
+        .footer-logo-block { margin-bottom: 30px; }
+        .france-2030-block { margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .france-2030-text { font-size: 0.8rem; color: var(--text-gray); max-width: 500px; font-style: italic; }
+        .footer-links a { margin: 0 15px; color: var(--text-gray); font-size: 0.9rem; text-decoration: none; }
+        .footer-links a:hover { color: var(--primary); text-decoration: underline; }
+
+        /* Responsive */
         @media (max-width: 900px) {
             .hero-grid, .split-section { grid-template-columns: 1fr; gap: 40px; text-align: center; }
             .hero-image { order: -1; }
@@ -235,16 +192,15 @@
     <header>
         <div class="container nav-flex">
             <div class="logo">
-                <img src="https://Logo_LSE_horizontal" alt="Logo">
-                Label <span>Startup Engagée</span>
+                <img src="Logo_LSE_horizontal.png" alt="Logo Label Startup Engagée" width="180">
             </div>
             <nav class="nav-links">
                 <a href="#pourquoi">Pourquoi ?</a>
                 <a href="#process">Parcours</a>
-                <a href="#contenu">Inclus</a>
-                <a href="#faq">FAQ</a>
+                <a href="#echelons">Les Niveaux</a>
+                <a href="#tarif">Tarif</a>
+                <a href="#contact" class="btn">🚀 Me labelliser</a>
             </nav>
-            <a href="#tarif" class="btn">🚀 Me labelliser</a>
         </div>
     </header>
 
@@ -265,7 +221,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://Logo_LSE_vertical" alt="Illustration Label">
+                <img src="Logo_LSE_vertical.png" alt="Illustration Label" style="max-height: 500px;">
             </div>
         </div>
     </section>
@@ -274,8 +230,8 @@
     <div class="trust-bar">
         <div class="container">
             <div class="trust-grid">
-                <img src="https://Logo_Bpifrance.svg.png" alt="BPI France">
-                <img src="https://Logo_ImpactFrance.png" alt="Impact France">
+                <img src="Logo_Bpifrance.svg.png" alt="BPI France">
+                <img src="Logo_ImpactFrance.png" alt="Impact France">
             </div>
         </div>
     </div>
@@ -377,7 +333,43 @@
         </div>
     </section>
 
-    <!-- TARIF COMPACT -->
+    <!-- LES 3 ECHELONS -->
+    <section id="echelons" class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h2>Votre progression valorisée</h2>
+                <p>3 niveaux de maturité pour accompagner votre croissance RSE.</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- Niveau 1 -->
+                <div class="card text-center" style="border-top: 5px solid var(--accent);">
+                    <div class="level-number">1</div>
+                    <span class="level-badge">Niveau 1</span>
+                    <h3>Engagé</h3>
+                    <p style="font-size:0.95rem;">L'entreprise a formalisé ses premiers engagements. Elle a mis en place les documents structurants (chartes, politiques) et entame sa démarche de progrès.</p>
+                </div>
+
+                <!-- Niveau 2 -->
+                <div class="card text-center" style="border-top: 5px solid var(--secondary);">
+                    <div class="level-number">2</div>
+                    <span class="level-badge" style="background-color:var(--secondary);">Niveau 2</span>
+                    <h3>Confirmé</h3>
+                    <p style="font-size:0.95rem;">L'entreprise pilote sa RSE avec des plans d'action concrets. Elle mesure certains indicateurs clés et intègre les enjeux sociaux et environnementaux dans ses opérations.</p>
+                </div>
+
+                <!-- Niveau 3 -->
+                <div class="card text-center" style="border-top: 5px solid var(--primary);">
+                    <div class="level-number">3</div>
+                    <span class="level-badge" style="background-color:var(--primary);">Niveau 3</span>
+                    <h3>Exemplaire</h3>
+                    <p style="font-size:0.95rem;">La RSE est au cœur du modèle d'affaires. L'entreprise démontre un impact positif mesurable, une gouvernance partagée et des résultats probants sur les 3 piliers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARIF -->
     <section id="tarif" class="section-padding">
         <div class="container">
             <div class="pricing-card">
@@ -397,7 +389,7 @@
                     Valable jusqu'au 31 Décembre 2025
                 </p>
 
-                <a href="#" class="btn" style="width:100%;">🚀 Me labelliser</a>
+                <a href="#contact" class="btn" style="width:100%;">🚀 Me labelliser</a>
             </div>
         </div>
     </section>
@@ -480,22 +472,43 @@
         </div>
     </section>
 
+    <!-- SECTION CONTACT (BREVO INTEGRATION) -->
+    <section id="contact" class="section-padding" style="background-color: var(--bg-light);">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 30px;">Prêt à vous engager ?</h2>
+            <p style="margin-bottom: 40px;">Remplissez ce formulaire pour lancer votre labellisation.</p>
+            
+            <div style="max-width: 700px; margin: 0 auto; background: white; padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow);">
+                <!-- Iframe Brevo -->
+                <iframe width="540" height="900" src="https://418f5a01.sibforms.com/serve/MUIFAN0b4FqnU2OeWAobJy17uOVYZ07B__SvOt_ODM76pN_vwmxdFNvZwwFX_6QgzoFKNRPySKi-eRxAu3p9HGZ1JrSedy_PeZneBF1yqUGPuDxvMwvU8GL-gYq6DzpKdlQKIK3qmWQqHVUG6PR8YBaU7uIbc_TPL_oY8zVGXC-r16P-rf3Xa5NW5ApaQ5xe3N1S_U77dkuT0RRw" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <div class="logo" style="justify-content: center; margin-bottom: 20px;">
-                <img src="https://Logo_LSE_horizontal" alt="Logo">
-                Label <span>Startup Engagée</span>
+            <div class="footer-logo-block">
+                <div class="logo" style="justify-content: center;">
+                    <img src="Logo_LSE_horizontal.png" alt="Logo Label Startup Engagée" width="150">
+                </div>
+                <p style="margin-top:15px;">Structurer. Prouver. Progresser.</p>
             </div>
-            <p style="margin-bottom: 30px;">Structurer. Prouver. Progresser.</p>
-            <a href="#tarif" class="btn">🚀 Je me lance</a>
-            
-            <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.9rem; display: flex; justify-content: center; gap: 20px;">
-                <a href="#" style="color:var(--text-gray);">Mentions Légales</a>
-                <a href="#" style="color:var(--text-gray);">Politique de Confidentialité</a>
-                <a href="#" style="color:var(--text-gray);">Contact</a>
+
+            <div class="footer-links">
+                <a href="#">Mentions Légales</a>
+                <a href="#">Politique de Confidentialité</a>
+                <a href="#">CGV</a>
+                <a href="#contact">Contact</a>
             </div>
-            <p style="font-size: 0.8rem; margin-top: 10px;">&copy; 2025 Label Startup Engagée.</p>
+
+            <!-- BLOC FRANCE 2030 -->
+            <div class="france-2030-block">
+                <img src="Logo_France2030.png" alt="France 2030" style="width: 120px; height: auto;">
+                <p class="france-2030-text">Ce projet a été financé par la Région et/ou par l’État dans le cadre de France 2030</p>
+            </div>
+
+            <p style="font-size: 0.8rem; margin-top: 30px; color:#cbd5e1;">&copy; 2025 Label Startup Engagée. Tous droits réservés.</p>
         </div>
     </footer>
 
