@@ -136,6 +136,31 @@
             margin-bottom: 24px;
         }
 
+/* --- STYLE APERCU PLATEFORME --- */
+.platform-wrapper {
+    background-color: var(--secondary); /* Le Violet #8885FF */
+    padding: 40px; /* Espace autour de l'image */
+    border-radius: 24px; /* Coins arrondis du fond violet */
+    box-shadow: 0 20px 50px -10px rgba(136, 133, 255, 0.4); /* Ombre violette diffuse */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.platform-wrapper:hover {
+    transform: translateY(-5px); /* Petit effet de flottement au survol */
+}
+
+.platform-img {
+    border-radius: 12px; /* Coins arrondis de l'image elle-même */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Ombre portée de l'image pour la détacher du fond */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+        
         /* Echelons */
         .level-badge { background: var(--primary); color: var(--white); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; display: inline-block; }
         .level-number { font-size: 3rem; font-weight: 800; color: rgba(0, 218, 86, 0.4); line-height: 1; margin-bottom: 10px; }
