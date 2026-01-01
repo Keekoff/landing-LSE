@@ -55,4 +55,3 @@ Pour exercer vos droits : marion@keekoff.fr
 
 Vous pouvez également saisir la CNIL.
 
-  Add legal mentions page
