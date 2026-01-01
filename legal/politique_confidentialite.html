@@ -1,57 +1,230 @@
-POLITIQUE DE CONFIDENTIALITÉ
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de confidentialité – Label Startup Engagée</title>
+  <meta name="description" content="Politique de confidentialité – Label Startup Engagée (KeekOff SAS)." />
+  <meta name="robots" content="noindex,follow" />
 
-Label Startup Engagée
+  <!-- Police SEN (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-Les données personnelles collectées via le site Label Startup Engagée sont traitées par KeekOff SAS, en qualité de responsable de traitement.
+  <style>
+    /* --- VARIABLES & CHARTE (identiques à la home) --- */
+    :root {
+      --primary: #28007F;
+      --accent: #00DA56;
+      --secondary: #8885FF;
+      --bg-light: #F4F7FE;
+      --white: #ffffff;
+      --text-dark: #1E1E2F;
+      --text-gray: #64748b;
+      --radius: 16px;
+      --shadow: 0 10px 30px -10px rgba(40, 0, 127, 0.1);
+    }
 
-Données collectées
+    /* --- RESET & BASE --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Sen', sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: var(--bg-light);
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 { color: var(--primary); line-height: 1.2; font-weight: 700; }
+    p { color: var(--text-gray); font-size: 1.05rem; margin-bottom: 16px; }
+    a { text-decoration: none; transition: 0.3s; }
+    ul { list-style: none; }
 
-Les données susceptibles d’être collectées sont :
+    /* --- UTILITAIRES --- */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
-nom, prénom
+    /* --- Boutons --- */
+    .btn {
+      display: inline-block;
+      padding: 16px 32px;
+      background-color: var(--accent);
+      color: var(--primary);
+      font-weight: 700;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0, 218, 86, 0.4);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      white-space: nowrap;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 218, 86, 0.6);
+      background-color: #00b347;
+    }
 
-entreprise, fonction
+    /* --- Header (identique à la home) --- */
+    header {
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 800; font-size: 1.4rem; color: var(--primary); display: flex; align-items: center; gap:8px; }
+    .nav-links { display: flex; gap: 32px; font-weight: 600; align-items: center; }
+    .nav-links a { color: var(--primary); font-size: 1rem; }
+    .nav-links a:hover { color: var(--secondary); }
+    @media (max-width: 768px) { .nav-links { display: none; } }
 
-adresse email, téléphone
+    /* --- Page légale --- */
+    .legal-hero {
+      padding: 70px 0 30px;
+      background: radial-gradient(circle at top right, rgba(136, 133, 255, 0.12), transparent 45%);
+    }
+    .legal-hero h1 { font-size: 2.4rem; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .legal-hero p { max-width: 75ch; }
 
-données de navigation (cookies, adresse IP)
+    .legal-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,0.05);
+      padding: 34px;
+      margin: 0 auto 90px;
+      max-width: 900px;
+    }
 
-Finalités
+    .legal-card h2 {
+      font-size: 1.25rem;
+      margin-top: 22px;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
 
-Les données sont traitées pour :
+    .legal-card ul {
+      list-style: disc;
+      padding-left: 22px;
+      margin: 10px 0 16px;
+    }
 
-répondre aux demandes de contact
+    .muted {
+      color: var(--text-gray);
+      font-size: 0.95rem;
+      margin-top: 24px;
+    }
 
-gérer les relations commerciales et précontractuelles
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .back-link:hover { color: var(--secondary); }
+  </style>
+</head>
 
-améliorer le site et mesurer l’audience
+<body>
 
-respecter les obligations légales
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-flex">
+      <div class="logo">
+        <a href="../../">
+          <img src="../../Logo_LSE_horizontal.jpg" alt="Logo Label Startup Engagée" width="180">
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="../../#pourquoi">Pourquoi se labelliser ?</a>
+        <a href="../../#process">Les étapes</a>
+        <a href="../../#echelons">Les échelons</a>
+        <a href="../../#tarif">Le tarif</a>
+        <a href="https://app.label-startup-engagee.com/signup" target="_blank" rel="noopener" class="btn">🚀 Me labelliser</a>
+      </nav>
+    </div>
+  </header>
 
-Base légale
+  <!-- CONTENU POLITIQUE DE CONFIDENTIALITÉ -->
+  <main>
+    <section class="legal-hero">
+      <div class="container">
+        <h1>Politique de confidentialité</h1>
+        <p>
+          La présente politique de confidentialité décrit la manière dont <strong>KeekOff SAS</strong>,
+          exploitant la marque <strong>Label Startup Engagée</strong>, collecte et traite vos données personnelles.
+        </p>
+        <a class="back-link" href="../../">← Retour au site</a>
+      </div>
+    </section>
 
-Les traitements reposent sur :
+    <section class="container">
+      <div class="legal-card">
 
-l’intérêt légitime de KeekOff
-l’exécution de mesures précontractuelles ou contractuelles
-le consentement (cookies)
+        <h2>1. Responsable du traitement</h2>
+        <p>
+          Les données personnelles collectées via le site Label Startup Engagée sont traitées par
+          <strong>KeekOff SAS</strong>, en qualité de responsable de traitement.
+        </p>
 
-Durée de conservation
+        <h2>2. Données collectées</h2>
+        <p>Les données susceptibles d’être collectées sont :</p>
+        <ul>
+          <li>Nom, prénom</li>
+          <li>Entreprise, fonction</li>
+          <li>Adresse email, téléphone</li>
+          <li>Données de navigation (cookies, adresse IP)</li>
+        </ul>
 
-prospects : 3 ans
-clients : 5 ans après la fin de la relation
-données comptables : 10 ans
-cookies : 13 mois maximum
+        <h2>3. Finalités</h2>
+        <p>Les données sont traitées afin de :</p>
+        <ul>
+          <li>Répondre aux demandes de contact</li>
+          <li>Gérer les relations commerciales et précontractuelles</li>
+          <li>Améliorer le site et mesurer l’audience</li>
+          <li>Respecter les obligations légales</li>
+        </ul>
 
-Destinataires
+        <h2>4. Base légale</h2>
+        <p>Les traitements reposent sur :</p>
+        <ul>
+          <li>L’intérêt légitime de KeekOff</li>
+          <li>L’exécution de mesures précontractuelles ou contractuelles</li>
+          <li>Le consentement (notamment pour les cookies)</li>
+        </ul>
 
-Les données sont destinées exclusivement à KeekOff SAS et à ses prestataires techniques autorisés.
+        <h2>5. Durée de conservation</h2>
+        <ul>
+          <li>Prospects : 3 ans</li>
+          <li>Clients : 5 ans après la fin de la relation</li>
+          <li>Données comptables : 10 ans</li>
+          <li>Cookies : 13 mois maximum</li>
+        </ul>
 
-Droits
+        <h2>6. Destinataires</h2>
+        <p>
+          Les données sont destinées exclusivement à KeekOff SAS et à ses prestataires techniques autorisés.
+          Aucune donnée n’est vendue ni cédée à des tiers.
+        </p>
 
-Conformément au RGPD, vous disposez des droits d’accès, de rectification, d’effacement, d’opposition et de limitation.
+        <h2>7. Droits des personnes</h2>
+        <p>
+          Conformément au Règlement Général sur la Protection des Données (RGPD),
+          vous disposez des droits d’accès, de rectification, d’effacement, d’opposition et de limitation du traitement.
+        </p>
+        <p>
+          Pour exercer vos droits : <a href="mailto:marion@keekoff.fr">marion@keekoff.fr</a><br>
+          Vous pouvez également introduire une réclamation auprès de la CNIL.
+        </p>
 
-Pour exercer vos droits : marion@keekoff.fr
+        <p class="muted">Dernière mise à jour : janvier 2026</p>
+      </div>
+    </section>
+  </main>
 
-Vous pouvez également saisir la CNIL.
+  <!-- PAS DE FOOTER -->
 
+</body>
+</html>
