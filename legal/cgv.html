@@ -1,220 +1,100 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Conditions Générales de Vente – Label Startup Engagée</title>
-  <meta name="robots" content="noindex,follow" />
+  <title>CGV – Label Startup Engagée</title>
 
-  <!-- ===== HEAD DE LA HOMEPAGE (styles, fonts, etc.) ===== -->
-  <!-- Copie ce qui suit depuis l'<head> de ton index.html si tu as des liens vers CSS / fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Tu peux ajouter ici tes <link rel="stylesheet"> depuis ta homepage -->
 
   <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      color: #0f172a;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      line-height: 1.65;
+    /* Style de base pour le body et containers */
+    body { font-family:sans-serif; margin:0; padding:0; }
+    .container-lg { max-width:1024px; margin:0 auto; padding:0 20px; }
+    .fw-medium { font-weight:500; }
+    .fs-sm { font-size:14px; }
+    .btn-outline-primary {
+      color:#0ea5e9; border:1px solid #0ea5e9; border-radius:6px;
+      text-decoration:none; font-weight:600;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .wrap {
-      max-width: 1024px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    /* Header (copié du site) */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: #fff;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-    .nav .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .nav .brand img {
-      max-height: 32px;
-    }
-    .navlinks {
-      display: flex;
-      gap: 18px;
-      font-weight: 500;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-      color: #475569;
-    }
-    .navlinks a:hover {
-      color: #0f172a;
-    }
-    .cta {
-      padding: 10px 16px;
-      font-size: 14px;
-      font-weight: 600;
-      border: 1px solid #0ea5e9;
-      border-radius: 8px;
-      background: #0ea5e9;
-      color: #fff;
-    }
-
-    /* CONTENU PRINCIPAL */
-    .section-legal {
-      padding: 48px 0 80px;
-    }
-    h1 {
-      font-size: 32px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: #0f172a;
-    }
-    .subtitle {
-      font-size: 15px;
-      color: #475569;
-      margin-bottom: 32px;
-      max-width: 72ch;
-    }
-    .content {
-      font-size: 15px;
-      color: #0f172a;
-      margin-top: 24px;
-    }
-    .content h2 {
-      margin-top: 28px;
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .content p,
-    .content ul {
-      margin-top: 8px;
-      line-height: 1.7;
-    }
-    .content ul {
-      list-style: disc;
-      padding-left: 20px;
-    }
+    .btn-outline-primary:hover { background:#0ea5e9; color:#fff; }
+    header { border-bottom:1px solid #e5e7eb; }
+    header a { color:#475569; text-decoration:none; }
+    header a:hover { color:#0f172a; }
   </style>
 </head>
 
 <body>
 
-  <!-- ===== HEADER – IDENTIQUE À LA HOMEPAGE ===== -->
-  <header>
-    <div class="wrap">
-      <div class="nav">
-        <a class="brand" href="../../">
-          <img src="../../assets/logo-lse.svg" alt="Label Startup Engagée" />
-        </a>
+  <!-- ===== HEADER HOMEPAGE STYLE ===== -->
+  <header class="header">
+    <div class="container-lg py-3 d-flex align-items-center justify-content-between">
+      <a href="../../" class="d-flex align-items-center gap-2">
+        <img src="../../assets/logo-lse.svg" alt="Label Startup Engagée" style="height:32px;" />
+      </a>
 
-        <nav class="navlinks">
-          <a href="../../#pourquoi">Pourquoi</a>
-          <a href="../../#etapes">Étapes</a>
-          <a href="../../#echelons">Échelons</a>
-          <a href="../../#tarif">Tarif</a>
-        </nav>
+      <nav class="d-none d-md-flex gap-4 fw-medium fs-sm">
+        <a href="../../#pourquoi">Pourquoi</a>
+        <a href="../../#etapes">Étapes</a>
+        <a href="../../#echelons">Échelons</a>
+        <a href="../../#tarif">Tarif</a>
+      </nav>
 
-        <a class="cta" href="https://app.label-startup-engagee.com/" target="_blank" rel="noopener">
-          Me labelliser
-        </a>
-      </div>
+      <a href="https://app.label-startup-engagee.com/" target="_blank" rel="noopener"
+         class="btn btn-outline-primary px-3 py-2">
+        Me labelliser
+      </a>
     </div>
   </header>
 
-  <!-- ===== CONTENU CGV ===== -->
-  <main>
-    <section class="section-legal wrap">
-      <h1>Conditions Générales de Vente</h1>
-      <p class="subtitle">
-        Les présentes Conditions Générales de Vente s’appliquent à l’ensemble des prestations proposées
-        sous la marque <strong>Label Startup Engagée</strong> – exploité par KeekOff SAS.
+  <!-- ===== CONTENU PRINCIPAL (CGV) ===== -->
+  <main class="container-lg" style="padding-top:40px; padding-bottom:60px;">
+    <h1 style="font-size:28px; font-weight:600; margin-bottom:16px;">
+      Conditions Générales de Vente
+    </h1>
+
+    <p style="color:#475569; max-width:70ch;">
+      Les présentes Conditions Générales de Vente s’appliquent à toutes les prestations proposées
+      par <strong>Label Startup Engagée</strong>, marque exploitée par KeekOff SAS.
+    </p>
+
+    <section style="margin-top:32px; font-size:15px; line-height:1.7; color:#0f172a;">
+      <h2 style="margin-top:24px; font-weight:600;">1. Identité du prestataire</h2>
+      <p>
+        <strong>KeekOff SAS</strong><br />
+        SAS au capital de 1 000 € – 129 rue Lamarck, 75018 Paris – France<br />
+        RCS Paris 899 472 609 – SIREN : 899 472 609<br />
+        Contact : <a href="mailto:aurelie@keekoff.fr">aurelie@keekoff.fr</a>
       </p>
 
-      <article class="content">
-        <h2>1. Identité du prestataire</h2>
-        <p>
-          <strong>KeekOff SAS</strong><br />
-          SAS au capital de 1 000 €<br />
-          Siège social : 129 rue Lamarck – 75018 Paris – France<br />
-          RCS Paris 899 472 609 – SIREN : 899 472 609<br />
-          Contact : <a href="mailto:aurelie@keekoff.fr">aurelie@keekoff.fr</a>
-        </p>
+      <h2 style="margin-top:24px; font-weight:600;">2. Champ d’application</h2>
+      <p>
+        Ces CGV s’appliquent à l’ensemble des prestations de conseil, d’accompagnement,
+        d’évaluation et de formation proposées par KeekOff SAS.
+      </p>
 
-        <h2>2. Champ d’application</h2>
-        <p>
-          Ces CGV s’appliquent à toutes les prestations de conseil, d’accompagnement, d’évaluation,
-          de labellisation, d’audit et de formation proposées sous la marque Label Startup Engagée,
-          exclusivement destinées à des clients professionnels.
-        </p>
+      <h2 style="margin-top:24px; font-weight:600;">3. Commande</h2>
+      <p>
+        Toute commande devient ferme après acceptation écrite du devis
+        ou paiement partiel/total de la prestation.
+      </p>
 
-        <h2>3. Commande</h2>
-        <p>
-          Toute commande devient ferme après acceptation écrite du devis (signature ou email),
-          ou paiement total ou partiel de la prestation.
-        </p>
+      <h2 style="margin-top:24px; font-weight:600;">4. Prix et paiement</h2>
+      <p>
+        Les prix sont en euros hors taxes (HT). Modalités de paiement selon devis.
+        Retard : pénalités légales + indemnité forfaitaire de 40 €.
+      </p>
 
-        <h2>4. Prix et modalités de paiement</h2>
-        <p>
-          Les prix sont en euros hors taxes (HT). Le paiement s’effectue selon les modalités indiquées
-          sur le devis. En cas de retard, des pénalités légales s’appliquent, ainsi qu’une indemnité
-          forfaitaire de 40 € pour frais de recouvrement.
-        </p>
+      <h2 style="margin-top:24px; font-weight:600;">5. Responsabilité</h2>
+      <p>
+        La responsabilité de KeekOff SAS est limitée au montant HT payé par le client.
+      </p>
 
-        <h2>5. Exécution des prestations</h2>
-        <p>
-          KeekOff SAS est tenue à une obligation de moyens. Les délais communiqués sont indicatifs
-          sauf engagement contractuel contraire.
-        </p>
-
-        <h2>6. Obligations du client</h2>
-        <p>
-          Le client s’engage à fournir des informations exactes et complètes et à coopérer à la bonne
-          réalisation des prestations.
-        </p>
-
-        <h2>7. Propriété intellectuelle</h2>
-        <p>
-          Les livrables, méthodes et contenus produits par KeekOff SAS restent sa propriété
-          intellectuelle. Le client bénéficie d’un droit d’usage interne non exclusif.
-        </p>
-
-        <h2>8. Responsabilité</h2>
-        <p>
-          La responsabilité de KeekOff SAS est limitée au montant total HT payé pour la prestation concernée.
-        </p>
-
-        <h2>9. Droit applicable</h2>
-        <p>
-          Les présentes CGV sont soumises au droit français. Tout litige est de la compétence des
-          juridictions françaises.
-        </p>
-
-        <p style="margin-top:24px; font-size:14px; color:#6b7280;">
-          Dernière mise à jour : janvier 2026
-        </p>
-      </article>
+      <p style="margin-top:32px; font-size:14px; color:#6b7280;">
+        Dernière mise à jour : janvier 2026
+      </p>
     </section>
   </main>
-
-  <!-- PAS DE FOOTER (comme demandé) -->
 
 </body>
 </html>
