@@ -21,4 +21,3 @@ L’ensemble des contenus du site est protégé par le droit de la propriété i
 
 KeekOff SAS ne saurait être tenue responsable des erreurs ou omissions présentes sur le site, ni de l’utilisation qui pourrait en être faite.
 
-Add legal mentions page
